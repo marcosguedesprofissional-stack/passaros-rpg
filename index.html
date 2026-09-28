@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#020305"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes">
+  <title>Pássaros RPG</title>
+  <base href="./">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="game" class="game">
+    <header class="topbar">
+      <div class="profile">
+        <div class="avatar-frame">
+          <div class="avatar-art" aria-label="Avatar de Sirius"></div>
+        </div>
+        <div class="identity">
+          <h1>Sirius</h1>
+          <div class="level">Nível <strong id="level">14</strong></div>
+          <div class="xp-row">
+            <div class="xp-track"><div id="xp-fill" class="xp-fill"></div></div>
+            <span id="xp-text">1.250 / 2.000 XP</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="virtues" aria-label="Princípios">
+        <button><span>♜</span><b>Disciplina</b></button>
+        <button><span>◎</span><b>Foco</b></button>
+        <button><span>◢</span><b>Evolução</b></button>
+        <button><span>♞</span><b>Liberdade</b></button>
+        <button><span>⌃</span><b>Propósito</b></button>
+      </nav>
+
+      <button id="menuBtn" class="menu-btn" aria-label="Abrir menu"><i></i><i></i><i></i></button>
+    </header>
+
+    <div class="layout">
+      <nav class="side-nav" aria-label="Navegação principal">
+        <button data-screen="character"><span>♜</span><b>Personagem</b></button>
+        <button class="active" data-screen="inventory"><span>♙</span><b>Inventário</b></button>
+        <button data-screen="dungeons"><span>⌂</span><b>Masmorras</b></button>
+        <button data-screen="map"><span>✥</span><b>Mapa</b></button>
+        <button data-screen="achievements"><span>♜</span><b>Conquistas</b></button>
+      </nav>
+
+      <main class="main-area">
+        <section id="hero" class="hero-panel">
+          <div class="moon"></div>
+          <div class="hero-glow"></div>
+          <div class="character-stage" aria-label="Personagem de Sirius">
+            <img class="character-image" src="./assets/avatar/sirius-corpo-inteiro.webp" alt="Sirius, personagem do Pássaros RPG">
+          </div>
+          <div class="hero-copy">
+            <span class="small-label">PÁSSAROS RPG</span>
+            <h2 id="screenTitle">Inventário</h2>
+            <p id="screenSub">Equipamentos e recursos da jornada.</p>
+          </div>
+        </section>
+
+        <section class="inventory-panel">
+          <div class="panel-title">
+            <div class="ornament">◉</div>
+            <h2>Equipamentos</h2>
+            <span class="line"></span>
+          </div>
+
+          <div class="filters">
+            <button class="filter active">⚔ <span>Tudo</span></button>
+            <button class="filter">⚔ <span>Arma</span></button>
+            <button class="filter">♜ <span>Armadura</span></button>
+            <button class="filter">○ <span>Acessório</span></button>
+            <button class="filter">◌ <span>Consumível</span></button>
+          </div>
+
+          <div id="items" class="items"></div>
+        </section>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+    <div id="menu" class="menu-overlay">
+      <button class="close-menu" id="closeMenu">×</button>
+      <div class="menu-card">
+        <span class="small-label">PÁSSAROS RPG</span>
+        <h2>Menu</h2>
+        <button>Configurações</button>
+        <button>Salvar progresso</button>
+        <button>Voltar ao jogo</button>
+      </div>
+    </div>
+  </div>
+  <script src="./js/game.js"></script>
+</body>
+</html>
